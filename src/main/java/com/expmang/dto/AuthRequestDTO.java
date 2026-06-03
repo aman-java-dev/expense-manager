@@ -1,10 +1,6 @@
 package com.expmang.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
 public class AuthRequestDTO {
     private String email;
     private String password;

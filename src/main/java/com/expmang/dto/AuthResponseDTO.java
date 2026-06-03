@@ -2,8 +2,6 @@ package com.expmang.dto;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
 public class AuthResponseDTO {
 
 	private String token;
