@@ -1,9 +1,5 @@
 package com.expmang.dto;
 
-import lombok.*;
-
-@Getter
-@Setter
 public class AnalyticsDTO {
 
     private String categoryName;
