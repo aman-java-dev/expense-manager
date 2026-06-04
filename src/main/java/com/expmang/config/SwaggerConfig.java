@@ -1,11 +1,12 @@
 package com.expmang.config;
 
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
-import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.servers.Server;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,6 +23,12 @@ public class SwaggerConfig {
                         .contact(new Contact()
                                 .name("Aman")
                                 .email("aman@example.com")))
+                .addServersItem(new Server()
+                        .url("https://expense-manager-production-b6c9.up.railway.app")
+                        .description("Production Server"))
+                .addServersItem(new Server()
+                        .url("http://localhost:8080")
+                        .description("Local Server"))
                 .addSecurityItem(new SecurityRequirement()
                         .addList("Bearer Authentication"))
                 .components(new Components()
